@@ -28,7 +28,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ["id", "product_name", "price", "stock", "cat_id"],
+        attributes: ["id", "product_name", "price", "stock", "category_id"],
       },
     ],
   })
@@ -60,7 +60,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  // delete on tag by its `id` value
+  // delete on tag by its "id" value
   Tag.destroy({ where: { id: req.params.id } })
     .then((result) => {
       return res.json(result);
