@@ -4,7 +4,7 @@ const Sequelize = require("sequelize");
 
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
-  : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+  : new Sequelize("ecommerce_db", "root", "", {
       host: "localhost",
       dialect: "mysql",
       // port: 8000,
@@ -13,16 +13,5 @@ const sequelize = process.env.JAWSDB_URL
       },
     });
 
-// const { Sequelize } = require("sequelize");
-
-// const db = new Sequelize("ecommerce_db", "root", "spiderman", {
-//   host: "localhost",
-//   dialect: "mysql",
-//   pool: {
-//     max: 9,
-//     min: 0,
-//     idle: 10000,
-//   },
-// });
 
 module.exports = sequelize;

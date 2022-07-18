@@ -34,13 +34,7 @@ Product.init(
         isInt: true,
       },
     },
-    // cat_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "category",
-    //     key: "id",
-    //   }
-    // },
+ 
   },
 
   {
